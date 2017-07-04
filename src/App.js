@@ -17,10 +17,33 @@ class App extends React.Component {
           </ChannelContainer>
         </Channels>
         <Threads>
-          <p>test</p>
-          <p>test</p>
-          <p>test</p>
-          <p>test</p>
+          <ThreadContainer>
+            <ThreadHeader>
+              <ThreadHeaderText>P</ThreadHeaderText>
+            </ThreadHeader>
+            <ThreadContent>
+              <ThreadUser>Mitch Ball</ThreadUser>
+              <ThreadTitle>Introducing threads!</ThreadTitle>
+            </ThreadContent>
+          </ThreadContainer>
+          <ThreadContainer>
+            <ThreadHeader>
+              <ThreadHeaderText>J</ThreadHeaderText>
+            </ThreadHeader>
+            <ThreadContent>
+              <ThreadUser>Mitch Ball</ThreadUser>
+              <ThreadTitle>Threads is hiring!</ThreadTitle>
+            </ThreadContent>
+          </ThreadContainer>
+          <ThreadContainer>
+            <ThreadHeader>
+              <ThreadHeaderText>Q</ThreadHeaderText>
+            </ThreadHeader>
+            <ThreadContent>
+              <ThreadUser>Mitch Ball</ThreadUser>
+              <ThreadTitle>How do I make a new thread?!</ThreadTitle>
+            </ThreadContent>
+          </ThreadContainer>
         </Threads>
       </Container>
     );
@@ -35,7 +58,7 @@ const Container = styled.div`
 
 const Channels = styled.div`
   padding: 8px;
-  background-color: #616161;
+  background-color: #424242;
   display: flex;
   flex-direction: column;
 `;
@@ -44,7 +67,7 @@ const ChannelContainer = styled.div`
   width: 48px;
   height: 48px;
   margin: 8px;
-  background-color: #757575;
+  background-color: #616161;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,19 +75,67 @@ const ChannelContainer = styled.div`
   cursor: pointer;
   &:hover {
     margin: 4px;
-    border: solid 4px #9E9E9E;
+    border: solid 4px #979797;
   }
 `;
 
 const ChannelText = styled.p`
   margin: 0;
   font-size: 24px;
-  color: #E0E0E0;
+  color: #BDBDBD;
 `;
 
 const Threads = styled.div`
-  padding: 8px;
-  width: 240px;
-  background-color: #9E9E9E;
+  background-color: #EEEEEE;
 `;
+
+const ThreadContainer = styled.div`
+  width: 240px;
+  height: 56px;
+  margin: 8px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  display: flex;
+  
+`;
+
+const ThreadHeader = styled.div`
+  width: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #03A9F4;
+  border-radius: 4px 0 0 4px;
+`;
+
+const ThreadHeaderText = styled.p`
+  margin: 0;
+  font-size: 40px;
+  font-weight: 100;
+  color: #81D4FA;
+`
+
+const ThreadContent = styled.div`
+  margin: 4px;
+  width: 176px;
+`;
+
+const ThreadUser = styled.p`
+  margin: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
+const ThreadTitle = styled.p`
+  margin: 4px;
+  font-size: 16px;
+  font-weight: 100;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
 export default App;
