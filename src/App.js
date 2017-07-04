@@ -7,13 +7,13 @@ class App extends React.Component {
       <Container>
         <Channels>
           <ChannelContainer>
-            <ChannelText>PM</ChannelText>
+            <ChannelText>VR</ChannelText>
           </ChannelContainer>
           <ChannelContainer>
-            <ChannelText>RV</ChannelText>
+            <ChannelText>AR</ChannelText>
           </ChannelContainer>
           <ChannelContainer>
-            <ChannelText>CS</ChannelText>
+            <ChannelText>AI</ChannelText>
           </ChannelContainer>
         </Channels>
         <Threads>
@@ -58,6 +58,8 @@ const ChannelContainer = styled.div`
 
 const ChannelText = styled.p`
   margin: 0;
+  font-size: 24px;
+  color: #E0E0E0;
 `;
 
 const Threads = styled.div`
