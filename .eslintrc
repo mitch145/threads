@@ -1,0 +1,7 @@
+{
+	"extends": "airbnb",
+	"rules": {
+    // .jsx as a file extension is outdated and unnecessary 
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  }
+}
